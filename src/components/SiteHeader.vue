@@ -13,13 +13,15 @@ const emit = defineEmits(['navigate', 'open-test-drive', 'open-configurator'])
 const isVehiclesHovered = ref(false)
 const isMobileMenuOpen = ref(false)
 
+const base = import.meta.env.BASE_URL
+
 const models = [
-  { id: 1, name: 'MODELO V1', page: 'home', image: '/images/model-v1.jpg', tag: 'Sedan' },
-  { id: 2, name: 'MODELO V2', page: 'modelV2', image: '/images/model-v2.jpg', tag: 'SUV Premium' },
-  { id: 3, name: 'MODELO V3', page: 'home', image: '/images/model-v3.jpg', tag: 'Gran Turismo' },
-  { id: 4, name: 'MODELO V1', page: 'home', image: '/images/model-v1.jpg', tag: 'Performance' },
-  { id: 5, name: 'MODELO V2', page: 'modelV2', image: '/images/model-v2.jpg', tag: 'Special Edition' },
-  { id: 6, name: 'MODELO V1', page: 'home', image: '/images/model-v1.jpg', tag: 'Track' },
+  { id: 1, name: 'MODELO V1', page: 'home', image: `${base}images/model-v1.jpg`, tag: 'Sedan' },
+  { id: 2, name: 'MODELO V2', page: 'modelV2', image: `${base}images/model-v2.jpg`, tag: 'SUV Premium' },
+  { id: 3, name: 'MODELO V3', page: 'home', image: `${base}images/model-v3.jpg`, tag: 'Gran Turismo' },
+  { id: 4, name: 'MODELO V1', page: 'home', image: `${base}images/model-v1.jpg`, tag: 'Performance' },
+  { id: 5, name: 'MODELO V2', page: 'modelV2', image: `${base}images/model-v2.jpg`, tag: 'Special Edition' },
+  { id: 6, name: 'MODELO V1', page: 'home', image: `${base}images/model-v1.jpg`, tag: 'Track' },
 ]
 
 const navLinks = [

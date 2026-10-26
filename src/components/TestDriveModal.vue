@@ -23,10 +23,12 @@ const preferredDate = ref('')
 const preferredTime = ref('Manhã (09:00 - 12:00)')
 const isSubmitted = ref(false)
 
+const base = import.meta.env.BASE_URL
+
 const modelsList = [
-  { id: 'v1', name: 'MODELO V1', type: 'Sedan Esportivo 100% Elétrico', img: '/images/model-v1.jpg' },
-  { id: 'v2', name: 'MODELO V2', type: 'SUV Elétrico Premium', img: '/images/model-v2.jpg' },
-  { id: 'v3', name: 'MODELO V3', type: 'Gran Turismo Hyper-Electric', img: '/images/model-v3.jpg' }
+  { id: 'v1', name: 'MODELO V1', type: 'Sedan Esportivo 100% Elétrico', img: `${base}images/model-v1.jpg` },
+  { id: 'v2', name: 'MODELO V2', type: 'SUV Elétrico Premium', img: `${base}images/model-v2.jpg` },
+  { id: 'v3', name: 'MODELO V3', type: 'Gran Turismo Hyper-Electric', img: `${base}images/model-v3.jpg` }
 ]
 
 const dealerships = [

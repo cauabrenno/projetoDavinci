@@ -14,6 +14,8 @@ const props = defineProps({
 
 const emit = defineEmits(['close'])
 
+const base = import.meta.env.BASE_URL
+
 const selectedColor = ref('vermelho')
 const selectedWheel = ref('21')
 const isOrderSubmitted = ref(false)
@@ -131,7 +133,7 @@ function handleClose() {
               <div class="text-center">
                 <div class="relative overflow-hidden p-4 rounded-sm bg-gray-50 border border-gray-200 mb-4">
                   <img
-                    :src="modelName === 'MODELO V1' ? '/images/model-v1.jpg' : '/images/model-v2.jpg'"
+                    :src="modelName === 'MODELO V1' ? `${base}images/model-v1.jpg` : `${base}images/model-v2.jpg`"
                     :alt="modelName"
                     class="w-full h-48 object-contain transition-transform duration-500 hover:scale-105"
                   />
